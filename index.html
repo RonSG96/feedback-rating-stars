@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Encuesta Dermasoft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <form action="procesar.php" method="post">
+            <!-- Pregunta 1: Email -->
+            <h4>1. ¿Cuál es tu correo electrónico?</h4>
+            <input class="input-email" type="email" name="email" placeholder="Ingrese su correo aquí..." required>
+
+            <!-- Pregunta 2: Experiencia de Compra -->
+            <h4>2. ¿Cómo calificarías tu experiencia de compra en Dermasoft?</h4>
+            <div class="rating" data-rating="experience">
+                <!-- Estrellas serán generadas por JS -->
+            </div>
+            <textarea name="experience_comment" cols="30" rows="5" placeholder="Explique su valoración..."></textarea>
+
+            <!-- Pregunta 3: Asesoría y Soporte -->
+            <h4>3. ¿Consideras que nuestro equipo te ofreció la asesoría y soporte necesario durante tu compra?</h4>
+            <div class="rating" data-rating="support">
+                <!-- Estrellas serán generadas por JS -->
+            </div>
+            <textarea name="support_comment" cols="30" rows="5" placeholder="Explique su valoración..."></textarea>
+
+            <!-- Pregunta 4: Satisfacción con los Productos -->
+            <h4>4. ¿Cuál es tu nivel de satisfacción con los productos que adquiriste en tu última compra?</h4>
+            <div class="rating" data-rating="products">
+                <!-- Estrellas serán generadas por JS -->
+            </div>
+            <textarea name="products_comment" cols="30" rows="5" placeholder="Explique su valoración..."></textarea>
+
+            <!-- Pregunta 5: Sugerencias -->
+            <h4>5. ¿Tienes alguna sugerencia o recomendación que nos ayude a mejorar?</h4>
+            <textarea name="suggestions" cols="30" rows="5" placeholder="Escriba aquí..."></textarea>
+
+            <div class="btn-group">
+                <button type="submit" class="btn submit">Enviar</button>
+                <button type="button" class="btn cancel">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
